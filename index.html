@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Your Birthday Rarity</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="script.js" defer></script>
+</head>
+
+<body class="bg-gray-100">
+  <div class="container mx-auto p-4">
+    <h1 class="text-3xl font-bold mb-4">How Rare Is Your Birthday?</h1>
+    <form>
+      <div class="mb-4">
+        <label for="birthday" class="block text-gray-700 font-bold mb-2">Select your birthday:</label>
+        <input type="date" id="birthday" name="birthday" class="border border-gray-300 rounded-md p-2">
+      </div>
+    <!-- SUBMIT BUTTON -->
+      <button id="submitBtn" type="button" class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+        Submit
+      </button>
+      <br><br>
+      <!-- RARITY -->
+      <div class="mb-4 flex flex-col w-48">
+        <label for="rarity" class="block text-gray-700 font-bold mb-2">Rarity (0/10):</label>
+        <input type="text" id="rarity" name="rarity" class="border border-gray-300 rounded-md p-2" value="0" disabled>
+            <input type="range" id="slider" name="slider" min="0" max="10" value="0" class="border border-gray-300 rounded-md p-2" disabled>
+        </div>
+      <!-- RANK -->
+      <div class="mb-4">
+        <label for="rank" class="block text-gray-700 font-bold mb-2">Rank (1/366):</label>
+        <input type="text" id="rank" name="rank" class="border border-gray-300 rounded-md p-2" value="0" disabled>
+      </div>
+      <div class="mb-4">
+      <!-- BIRTHS THAT DAY -->
+        <label for="births" class="block text-gray-700 font-bold mb-2">Births on average that day (U.S Data):</label>
+        <input type="text" id="births" name="births" class="border border-gray-300 rounded-md p-2" value="0" disabled>
+      </div>
+    </form>
+    <h1 class="text-3xl text-red-700" id="errorMessage"></h1>
+  </div>
+</body>
+
+</html>
