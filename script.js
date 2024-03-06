@@ -1,7 +1,5 @@
 document.getElementById("submitBtn").onclick = function() {
-  console.log("Button clicked");
   const birthdayValue = document.getElementById("birthday").value;
-  console.log(birthdayValue);
   const [year, month, date] = birthdayValue.split("-");
   
   fetch("/data.json")
